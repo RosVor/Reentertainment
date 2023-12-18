@@ -1,16 +1,45 @@
-export const App = () => {
+import { NavLink } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import Movies from './Movies';
+import MovieDetails from './MovieDetails';
+import Cast from './Cast';
+import Reviews from './Reviews';
+
+const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <NavLink to="/" activeClassName="active">
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/movies" activeClassName="active">
+                Movies
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/movies/:movieId" element={<MovieDetails />} />
+          <Route path="/movies/:movieId/cast" element={<Cast />} />
+          <Route path="/movies/:movieId/reviews" element={<Reviews />} />
+
+        </Routes>
+      </main>
+      <footer>
+
+      </footer>
     </div>
   );
 };
+export default App;
