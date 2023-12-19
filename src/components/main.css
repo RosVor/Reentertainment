@@ -1,0 +1,25 @@
+
+.header-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .header-list li {
+    margin-right: 20px;
+  }
+  
+  .header-list a {
+    text-decoration: none;
+  }
+  
+  .header-list a:hover {
+    color: blue;
+  }
+  
+  .active {
+    font-weight: bold;
+    color: red;
+  }
+  
+  

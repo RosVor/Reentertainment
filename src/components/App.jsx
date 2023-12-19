@@ -6,13 +6,14 @@ import Movies from './Movies';
 import MovieDetails from './MovieDetails';
 import Cast from './Cast';
 import Reviews from './Reviews';
+import '../components/main.css';
 
 const App = () => {
   return (
     <div>
       <header>
         <nav>
-          <ul>
+          <ul className="header-list">
             <li>
               <NavLink to="/" activeClassName="active">
                 Home

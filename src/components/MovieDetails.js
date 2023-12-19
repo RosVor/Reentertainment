@@ -68,14 +68,20 @@ const MovieDetails = () => {
 
   return (
     <div>
-      <button onClick={() => navigate(-1)}>Повернутись назад</button>
-      <h2>{movieDetails.title}</h2>
+      <button onClick={() => navigate(-1)}>Return</button>
+     <div className='movies-details'>
       <img src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`} alt={movieDetails.title} />
-      <p>{movieDetails.overview}</p>
-      <p>User Score: {movieDetails.vote_average}</p>
-      <p>Genres: {movieDetails.genres.map((genre) => genre.name).join(', ')}</p>
-
+      <div className='movies-details-info'>
+      <h2>{movieDetails.title}</h2>
+          <p>User Score: {movieDetails.vote_average}</p>
+          <h3>Overview</h3>
+          <p>{movieDetails.overview}</p>
+          <h4>Genres</h4>
+      <p>{movieDetails.genres.map((genre) => genre.name).join(', ')}</p>
+      </div>
+      </div>
       <nav>
+      <p>Additional information</p>
         <ul>
           <li>
             <Link to="#" onClick={handleToggleCast}>
