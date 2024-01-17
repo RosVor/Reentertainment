@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
+
+const Cast = lazy(() => import('./Cast'));
+const Reviews = lazy(() => import('./Reviews'));
 
 const MovieDetails = () => {
   const { movieId } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
-  const [cast, setCast] = useState([]);
+   // eslint-disable-next-line no-unused-vars
+   const [cast, setCast] = useState([]);
+   // eslint-disable-next-line no-unused-vars
   const [reviews, setReviews] = useState([]);
   const [showCast, setShowCast] = useState(false);
   const [showReviews, setShowReviews] = useState(false);
@@ -69,19 +74,19 @@ const MovieDetails = () => {
   return (
     <div>
       <button onClick={() => navigate(-1)}>Return</button>
-     <div className='movies-details'>
-      <img src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`} alt={movieDetails.title} />
-      <div className='movies-details-info'>
-      <h2>{movieDetails.title}</h2>
+      <div className='movies-details'>
+        <img src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`} alt={movieDetails.title} />
+        <div className='movies-details-info'>
+          <h2>{movieDetails.title}</h2>
           <p>User Score: {movieDetails.vote_average}</p>
           <h3>Overview</h3>
           <p>{movieDetails.overview}</p>
           <h4>Genres</h4>
-      <p>{movieDetails.genres.map((genre) => genre.name).join(', ')}</p>
-      </div>
+          <p>{movieDetails.genres.map((genre) => genre.name).join(', ')}</p>
+        </div>
       </div>
       <nav>
-      <p>Additional information</p>
+        <p>Additional information</p>
         <ul>
           <li>
             <Link to="#" onClick={handleToggleCast}>
@@ -96,36 +101,11 @@ const MovieDetails = () => {
         </ul>
       </nav>
 
-      {showCast && (
-        <div>
-          <h3>Cast</h3>
-          <ul>
-            {cast.map((actor) => (
-              <li key={actor.id}>
-                <img src={`https://image.tmdb.org/t/p/w200${actor.profile_path}`} alt={actor.name} />
-                <p>{actor.name}</p>
-                <p>Character: {actor.character}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {showReviews && (
-        <div>
-          <h3>Reviews</h3>
-          <ul>
-            {reviews.map((review) => (
-              <li key={review.id}>
-                <p>{review.author}</p>
-                <p>{review.content}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <Suspense fallback={<div>Loading...</div>}>
+        {showCast && <Cast />}
+        {showReviews && <Reviews />}
+      </Suspense>
     </div>
   );
 };
-
 export default MovieDetails;
