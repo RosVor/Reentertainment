@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -28,7 +27,7 @@ const Home = () => {
         {trendingMovies.map((movie) => (
           <li key={movie.id}>
             <Link to={`/movies/${movie.id}`} state={{ movie }}>
-              {/* Відображайте потрібні дані про фільм */}
+              {/* Відображай потрібні дані про фільм */}
               <p>{movie.title}</p>
             </Link>
           </li>

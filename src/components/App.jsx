@@ -1,6 +1,4 @@
-import { NavLink } from 'react-router-dom';
-import React from 'react';
-import { BrowserRouter as Route, Routes } from 'react-router-dom';
+import { NavLink, BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import Movies from './Movies';
 import MovieDetails from './MovieDetails';
