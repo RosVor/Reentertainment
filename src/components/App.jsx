@@ -1,7 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { NavLink } from 'react-router-dom';
-// eslint-disable-next-line no-unused-vars
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { NavLink, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import Movies from './Movies';
 import '../components/main.css';

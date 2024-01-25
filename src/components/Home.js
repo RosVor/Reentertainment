@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import MovieList from './MoviesList';
 
 const Home = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -23,16 +23,7 @@ const Home = () => {
   return (
     <div>
       <h2>Trending Movies Today</h2>
-      <ul>
-        {trendingMovies.map((movie) => (
-          <li key={movie.id}>
-            <Link to={`/movies/${movie.id}`} state={{ movie }}>
-              {/* Відображай потрібні дані про фільм */}
-              <p>{movie.title}</p>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <MovieList movies={trendingMovies} />
     </div>
   );
 };

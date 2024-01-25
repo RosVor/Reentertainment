@@ -1,18 +1,9 @@
-import React, { useEffect, useState, lazy, Suspense } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
-
-const Cast = lazy(() => import('./Cast'));
-const Reviews = lazy(() => import('./Reviews'));
+import React, { useEffect, useState } from 'react';
+import { useParams, Link, Outlet, useNavigate } from 'react-router-dom';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
-   // eslint-disable-next-line no-unused-vars
-   const [cast, setCast] = useState([]);
-   // eslint-disable-next-line no-unused-vars
-  const [reviews, setReviews] = useState([]);
-  const [showCast, setShowCast] = useState(false);
-  const [showReviews, setShowReviews] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -28,48 +19,12 @@ const MovieDetails = () => {
       }
     };
 
-    const fetchCast = async () => {
-      try {
-        const response = await fetch(
-          `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=39aef1fe202d396da43aaee435d1e2cc`
-        );
-        const data = await response.json();
-        setCast(data.cast);
-      } catch (error) {
-        console.error('Error fetching cast details:', error);
-      }
-    };
-
-    const fetchReviews = async () => {
-      try {
-        const response = await fetch(
-          `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=39aef1fe202d396da43aaee435d1e2cc`
-        );
-        const data = await response.json();
-        setReviews(data.results);
-      } catch (error) {
-        console.error('Error fetching reviews:', error);
-      }
-    };
-
     fetchMovieDetails();
-    fetchCast();
-    fetchReviews();
   }, [movieId]);
 
   if (!movieDetails) {
     return <div>Loading...</div>;
   }
-
-  const handleToggleCast = () => {
-    setShowCast(!showCast);
-    setShowReviews(false);
-  };
-
-  const handleToggleReviews = () => {
-    setShowReviews(!showReviews);
-    setShowCast(false);
-  };
 
   return (
     <div>
@@ -89,23 +44,17 @@ const MovieDetails = () => {
         <p>Additional information</p>
         <ul>
           <li>
-            <Link to="#" onClick={handleToggleCast}>
-              Cast
-            </Link>
+            <Link to="cast">Cast</Link>
           </li>
           <li>
-            <Link to="#" onClick={handleToggleReviews}>
-              Reviews
-            </Link>
+            <Link to="reviews">Reviews</Link>
           </li>
         </ul>
       </nav>
 
-      <Suspense fallback={<div>Loading...</div>}>
-        {showCast && <Cast />}
-        {showReviews && <Reviews />}
-      </Suspense>
+      <Outlet />
     </div>
   );
 };
+
 export default MovieDetails;
