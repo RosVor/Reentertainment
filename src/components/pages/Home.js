@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import MovieList from './MoviesList';
+import MovieList from '../MoviesList';
+import { getTrendingMovies } from '../api';
+import '../main.css';
 
 const Home = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -7,11 +9,8 @@ const Home = () => {
   useEffect(() => {
     const fetchTrendingMovies = async () => {
       try {
-        const response = await fetch(
-          'https://api.themoviedb.org/3/trending/movie/day?api_key=39aef1fe202d396da43aaee435d1e2cc'
-        );
-        const data = await response.json();
-        setTrendingMovies(data.results);
+        const movies = await getTrendingMovies();
+        setTrendingMovies(movies);
       } catch (error) {
         console.error('Error fetching trending movies:', error);
       }
@@ -29,5 +28,6 @@ const Home = () => {
 };
 
 export default Home;
+
 
 

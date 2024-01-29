@@ -8,12 +8,12 @@ const HeaderSharedLayout = () => {
         <nav>
           <ul className="header-list">
             <li>
-              <NavLink to="/" activeClassName="active">
+              <NavLink to="/" className="nav-link">
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/movies" activeClassName="active">
+              <NavLink to="/movies" className="nav-link">
                 Movies
               </NavLink>
             </li>
@@ -25,9 +25,7 @@ const HeaderSharedLayout = () => {
           <Outlet />
         </Suspense>
       </main>
-      <footer>
-        {/* Your footer content goes here */}
-      </footer>
+      <footer></footer>
     </div>
   );
 };

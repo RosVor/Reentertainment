@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, Outlet, useNavigate } from 'react-router-dom';
+import { getMovieDetails } from '../api'; 
 
 const MovieDetails = () => {
   const { movieId } = useParams();
@@ -9,11 +10,8 @@ const MovieDetails = () => {
   useEffect(() => {
     const fetchMovieDetails = async () => {
       try {
-        const response = await fetch(
-          `https://api.themoviedb.org/3/movie/${movieId}?api_key=39aef1fe202d396da43aaee435d1e2cc`
-        );
-        const data = await response.json();
-        setMovieDetails(data);
+        const details = await getMovieDetails(movieId);
+        setMovieDetails(details);
       } catch (error) {
         console.error('Error fetching movie details:', error);
       }
@@ -44,10 +42,10 @@ const MovieDetails = () => {
         <p>Additional information</p>
         <ul>
           <li>
-            <Link to="cast">Cast</Link>
+            <Link to={`${movieId}/cast`}>Cast</Link>
           </li>
           <li>
-            <Link to="reviews">Reviews</Link>
+            <Link to={`${movieId}/reviews`}>Reviews</Link>
           </li>
         </ul>
       </nav>

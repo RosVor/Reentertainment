@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { getMovieReviews } from './api';
 
 const Reviews = () => {
   const { movieId } = useParams();
@@ -7,15 +8,8 @@ const Reviews = () => {
 
   useEffect(() => {
     const fetchMovieReviews = async () => {
-      try {
-        const response = await fetch(
-          `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=39aef1fe202d396da43aaee435d1e2cc`
-        );
-        const data = await response.json();
-        setReviews(data.results);
-      } catch (error) {
-        console.error('Error fetching movie reviews:', error);
-      }
+      const data = await getMovieReviews(movieId);
+      setReviews(data);
     };
 
     fetchMovieReviews();
