@@ -3,11 +3,11 @@ import { useSearchParams } from 'react-router-dom';
 
 const SearchForm = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams(); 
 
   const handleSearch = async (e) => {
     e.preventDefault();
-    setSearchParams({ query: searchQuery });
+    searchParams.set('query', searchQuery); 
 
     if (onSearch) {
       onSearch(searchQuery);

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, Outlet, useNavigate } from 'react-router-dom';
-import { getMovieDetails } from '../api'; 
+import { getMovieDetails } from '../components/api'; 
 
 const MovieDetails = () => {
   const { movieId } = useParams();

@@ -26,7 +26,7 @@ export const getMovieDetails = async (movieId) => {
   }
 };
 
-export const searchMovies = async (searchQuery) => {
+export const searchMovies = async () => {
   try {
     const response = await fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}`
@@ -64,3 +64,4 @@ export const getMovieCast = async (movieId) => {
     return [];
   }
 };
+
