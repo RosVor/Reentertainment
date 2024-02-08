@@ -23,10 +23,11 @@ const Movies = () => {
     fetchSearchResults();
   }, [searchParams]);
 
-  const handleSearch = (query) => {
-    searchParams.set('query', query);
+  const handleSearch = async (query) => {
+    const results = await searchMovies(query);
+    setSearchResults(results);
   };
-
+  
   return (
     <div>
       <h2>Search Movies</h2>

@@ -26,10 +26,10 @@ export const getMovieDetails = async (movieId) => {
   }
 };
 
-export const searchMovies = async () => {
+export const searchMovies = async (query) => {
   try {
     const response = await fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}`
+      `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`
     );
     const data = await response.json();
     return data.results;
@@ -38,6 +38,7 @@ export const searchMovies = async () => {
     return [];
   }
 };
+
 
 export const getMovieReviews = async (movieId) => {
   try {
