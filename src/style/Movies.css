@@ -1,0 +1,82 @@
+/* Movie.css */
+html {
+  margin-left: 15px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: calc(100% - 22px);
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #61dafb;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+button:hover {
+  background-color: #21a1f1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s;
+  list-style: none;
+}
+
+li a:hover {
+  color: #0056b3;
+}
+
+.movies-details {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.movies-details img {
+  max-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.movies-details-info {
+  margin-left: 30px;
+}
+
+.movies-details-info h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.movies-details-info p {
+  font-size: 18px;
+  line-height: 1.6;
+}

@@ -1,0 +1,38 @@
+/* main.css */
+.header-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  background-color: #282c34;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left:50px;
+}
+
+.header-list li {
+  margin-right: 20px;
+}
+
+.header-list a {
+  text-decoration: none;
+  color: #61dafb;
+  font-size: 24px;
+}
+
+.header-list a:hover {
+  color: #21a1f1;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.nav-link {
+  text-decoration: none; 
+}
+
+header {
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}

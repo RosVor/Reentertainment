@@ -1,9 +1,10 @@
 import React, { Suspense } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
+import '../style/HeaderLayout.css';
 
 const HeaderSharedLayout = () => {
   return (
-    <div>
+    <div className="layout">
       <header>
         <nav>
           <ul className="header-list">
@@ -25,7 +26,16 @@ const HeaderSharedLayout = () => {
           <Outlet />
         </Suspense>
       </main>
-      <footer></footer>
+      <footer>
+        <div className="footer-content">
+          <p>Contact us:</p>
+          <ul>
+            <li>Email: example@example.com</li>
+            <li>Phone: +1234567890</li>
+            <li>Address: 123 Street, City, Country</li>
+          </ul>
+        </div>
+      </footer>
     </div>
   );
 };

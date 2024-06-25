@@ -1,0 +1,54 @@
+/* MovieDetails.css */
+
+.movie-details-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .movies-details {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .movie-det-poster {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+  }
+  .movies-details-name{
+    margin: 0;
+  }
+  .movies-details-info {
+    flex: 1;
+  }
+  
+  .movie-details-container button {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .movie-details-container button:hover {
+    background-color: #61dafb;
+  }
+  
+  .additional-info-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .additional-info-link:hover {
+    color: #0056b3;
+  }
+  
