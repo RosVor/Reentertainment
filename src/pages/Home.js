@@ -20,7 +20,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className='div-main'>
       <h2>Trending Movies Today</h2>
       <MovieList movies={trendingMovies} />
     </div>

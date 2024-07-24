@@ -6,7 +6,7 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Router basename='goit-react-hw-05-movies'>
+    <Router basename='Reentertainment'>
       <React.Suspense fallback={<div>Loading...</div>}>
         <App />
       </React.Suspense>

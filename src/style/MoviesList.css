@@ -1,22 +1,22 @@
 
 .movies-list-container {
     padding: 20px;
+    max-width: 1260px;
     background-color: #f9f9f9;
   }
   
   .movies-list {
     list-style: none; 
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
   }
   
-  .movie-item {
+  .movies-list-item {
     width: 200px;
   }
   
-  .movie-card {
+  .movies-list-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,25 +29,28 @@
     width: 200px 300px;
   }
   
-  .movie-card:hover {
+  .movies-list-card:hover {
     transform: scale(1.05);
   }
   
-  .movie-poster {
+  .movies-list-poster {
     width: 100%; 
     border-radius: 8px 8px 0 0;
   }
   
-  .movie-title {
+  .movies-list-title {
     text-decoration: none;
     font-size: 20px;
     margin: 10px 0;
-    padding: 0 10px;
     color: #333;
     white-space: nowrap;
     overflow: hidden; 
     text-overflow: ellipsis; 
     width: 100%; 
+  }
 
+  .movies-list-link{
+    text-decoration: none;
+    color: inherit;
   }
   

@@ -30,7 +30,8 @@ const MovieDetails = () => {
 
   return (
     <div className='movie-details-container'>
-      <button onClick={() => navigate(backLinkHref)}>Return</button>
+      <button className='button-return' onClick={() => navigate(backLinkHref)}>Return</button>
+      <button className='button-favourite'>Add to favourite</button>
       <div className='movies-details'>
         <img 
           src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`} 
@@ -48,12 +49,12 @@ const MovieDetails = () => {
         </div>
       </div>
       <nav>
-        <p>Additional information</p>
-        <ul>
-          <li>
+        <h4>Additional information</h4>
+        <ul className='movies-details-list'>
+          <li className='movies-details-item'>
             <Link to={`/movies/${movieId}/cast`} className='additional-info-link'>Cast</Link>
           </li>
-          <li>
+          <li className='movies-details-item'>
             <Link to={`/movies/${movieId}/reviews`} className='additional-info-link'>Reviews</Link>
           </li>
         </ul>

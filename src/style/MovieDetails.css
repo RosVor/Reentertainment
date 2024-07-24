@@ -23,8 +23,20 @@
   .movies-details-info {
     flex: 1;
   }
-  
-  .movie-details-container button {
+  .button-favourite {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: darkorange;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .button-return {
     margin-bottom: 10px;
     padding: 10px 20px;
     font-size: 16px;
@@ -37,8 +49,12 @@
     transition: background-color 0.3s;
   }
   
-  .movie-details-container button:hover {
+  .button-return:hover {
     background-color: #61dafb;
+  }
+
+  .button-favourite:hover {
+    background-color: darkgoldenrod;
   }
   
   .additional-info-link {
@@ -51,4 +67,3 @@
   .additional-info-link:hover {
     color: #0056b3;
   }
-  
