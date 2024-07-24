@@ -1,26 +1,28 @@
 {
   "files": {
     "main.css": "/Reentertainment/static/css/main.935d4bd4.css",
-    "main.js": "/Reentertainment/static/js/main.be0106f3.js",
-    "static/css/266.9167289b.chunk.css": "/Reentertainment/static/css/266.9167289b.chunk.css",
+    "main.js": "/Reentertainment/static/js/main.f3f0c625.js",
+    "static/css/266.ac104182.chunk.css": "/Reentertainment/static/css/266.ac104182.chunk.css",
     "static/js/266.ce2263d1.chunk.js": "/Reentertainment/static/js/266.ce2263d1.chunk.js",
-    "static/css/369.8227f9d0.chunk.css": "/Reentertainment/static/css/369.8227f9d0.chunk.css",
-    "static/js/369.7cf0668c.chunk.js": "/Reentertainment/static/js/369.7cf0668c.chunk.js",
+    "static/css/369.e7af1ce3.chunk.css": "/Reentertainment/static/css/369.e7af1ce3.chunk.css",
+    "static/js/369.811eb8aa.chunk.js": "/Reentertainment/static/js/369.811eb8aa.chunk.js",
+    "static/js/658.80412415.chunk.js": "/Reentertainment/static/js/658.80412415.chunk.js",
     "static/css/531.9ea3627f.chunk.css": "/Reentertainment/static/css/531.9ea3627f.chunk.css",
-    "static/js/531.91ab16e4.chunk.js": "/Reentertainment/static/js/531.91ab16e4.chunk.js",
+    "static/js/531.9b058f65.chunk.js": "/Reentertainment/static/js/531.9b058f65.chunk.js",
     "static/css/910.fec732d2.chunk.css": "/Reentertainment/static/css/910.fec732d2.chunk.css",
     "static/js/910.8e3a2c99.chunk.js": "/Reentertainment/static/js/910.8e3a2c99.chunk.js",
     "static/css/357.fec732d2.chunk.css": "/Reentertainment/static/css/357.fec732d2.chunk.css",
     "static/js/357.06794474.chunk.js": "/Reentertainment/static/js/357.06794474.chunk.js",
     "index.html": "/Reentertainment/index.html",
     "main.935d4bd4.css.map": "/Reentertainment/static/css/main.935d4bd4.css.map",
-    "main.be0106f3.js.map": "/Reentertainment/static/js/main.be0106f3.js.map",
-    "266.9167289b.chunk.css.map": "/Reentertainment/static/css/266.9167289b.chunk.css.map",
+    "main.f3f0c625.js.map": "/Reentertainment/static/js/main.f3f0c625.js.map",
+    "266.ac104182.chunk.css.map": "/Reentertainment/static/css/266.ac104182.chunk.css.map",
     "266.ce2263d1.chunk.js.map": "/Reentertainment/static/js/266.ce2263d1.chunk.js.map",
-    "369.8227f9d0.chunk.css.map": "/Reentertainment/static/css/369.8227f9d0.chunk.css.map",
-    "369.7cf0668c.chunk.js.map": "/Reentertainment/static/js/369.7cf0668c.chunk.js.map",
+    "369.e7af1ce3.chunk.css.map": "/Reentertainment/static/css/369.e7af1ce3.chunk.css.map",
+    "369.811eb8aa.chunk.js.map": "/Reentertainment/static/js/369.811eb8aa.chunk.js.map",
+    "658.80412415.chunk.js.map": "/Reentertainment/static/js/658.80412415.chunk.js.map",
     "531.9ea3627f.chunk.css.map": "/Reentertainment/static/css/531.9ea3627f.chunk.css.map",
-    "531.91ab16e4.chunk.js.map": "/Reentertainment/static/js/531.91ab16e4.chunk.js.map",
+    "531.9b058f65.chunk.js.map": "/Reentertainment/static/js/531.9b058f65.chunk.js.map",
     "910.fec732d2.chunk.css.map": "/Reentertainment/static/css/910.fec732d2.chunk.css.map",
     "910.8e3a2c99.chunk.js.map": "/Reentertainment/static/js/910.8e3a2c99.chunk.js.map",
     "357.fec732d2.chunk.css.map": "/Reentertainment/static/css/357.fec732d2.chunk.css.map",
@@ -28,6 +30,6 @@
   },
   "entrypoints": [
     "static/css/main.935d4bd4.css",
-    "static/js/main.be0106f3.js"
+    "static/js/main.f3f0c625.js"
   ]
 }
