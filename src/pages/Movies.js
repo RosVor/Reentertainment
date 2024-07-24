@@ -29,10 +29,10 @@ const Movies = () => {
   };
   
   return (
-    <div>
+    <div className="div-main">
       <h2>Search Movies</h2>
       <SearchForm onSearch={handleSearch} />
-      <MovieList movies={searchResults} />
+      {searchResults.length > 0 && <MovieList movies={searchResults} />}
     </div>
   );
 };

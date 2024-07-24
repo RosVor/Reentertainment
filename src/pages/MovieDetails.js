@@ -26,12 +26,20 @@ const MovieDetails = () => {
     return <div>Loading...</div>;
   }
 
+  const addToFavourite = () => {
+    let favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+    if (!favourites.some(favMovie => favMovie.id === movieDetails.id)) {
+      favourites.push(movieDetails);
+      localStorage.setItem('favourites', JSON.stringify(favourites));
+    }
+  };
+
   const backLinkHref = location.state?.from ?? "/";
 
   return (
     <div className='movie-details-container'>
       <button className='button-return' onClick={() => navigate(backLinkHref)}>Return</button>
-      <button className='button-favourite'>Add to favourite</button>
+      <button className='button-favourite' onClick={addToFavourite}>Add to favourite</button>
       <div className='movies-details'>
         <img 
           src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`} 

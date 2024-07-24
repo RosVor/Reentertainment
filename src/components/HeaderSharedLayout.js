@@ -18,6 +18,11 @@ const HeaderSharedLayout = () => {
                 Movies
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/favourites" className="nav-link">
+                Favourites
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </header>
